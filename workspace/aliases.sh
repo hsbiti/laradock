@@ -149,3 +149,10 @@ function fs() {
 		du $arg .[^.]* ./*;
 	fi;
 }
+
+
+ui='/var/www/ui'
+back='/var/www/backend'
+alias serve='cd $ui && ng serve --port 8080 --host 0.0.0.0'
+
+
