@@ -153,6 +153,17 @@ function fs() {
 
 ui='/var/www/ui'
 back='/var/www/backend'
-alias serve='cd $ui && ng serve --port 8080 --host 0.0.0.0'
+
+function s() {
+        if [ $1 == "ui" ]
+        then
+          cd $ui && ng serve --port 8080 --host 0.0.0.0
+        fi;
+        
+        if [ $1 == "backend" ]
+        then
+          cd $back && php artisan serve --host=0.0.0.0
+        fi;
+}
 
 
