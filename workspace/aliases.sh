@@ -153,13 +153,19 @@ function fs() {
 
 ui='/var/www/ui'
 back='/var/www/backend'
+adm='/var/www/admin'
 
 function s() {
         if [ $1 == "ui" ]
         then
           cd $ui && ng serve --port 8080 --host 0.0.0.0
         fi;
-        
+       
+	if [ $1 == "admin" ]
+        then
+          cd $adm && ng serve --port 3000 --host 0.0.0.0
+        fi;
+
         if [ $1 == "backend" ]
         then
           cd $back && php artisan serve --host=0.0.0.0
