@@ -158,12 +158,12 @@ adm='/var/www/admin'
 function s() {
         if [ $1 == "ui" ]
         then
-          cd $ui && ng serve --port 8080 --host 0.0.0.0
+          cd $ui && ng serve --port 3001 --host 0.0.0.0 --disable-host-check
         fi;
        
 	if [ $1 == "admin" ]
         then
-          cd $adm && ng serve --port 3000 --host 0.0.0.0
+          cd $adm && ng serve --port 3000 --host 0.0.0.0 --disable-host-check
         fi;
 
         if [ $1 == "backend" ]
