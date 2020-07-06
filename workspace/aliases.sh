@@ -155,6 +155,8 @@ ui='/var/www/ui'
 back='/var/www/backend'
 adm='/var/www/admin'
 
+alias a='php artisan'
+
 function s() {
         if [ $1 == "ui" ]
         then
